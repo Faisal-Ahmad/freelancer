@@ -2,7 +2,7 @@ import React,{Fragment} from 'react';
 import { Typography } from 'antd';
 import NormalButton from '../SmallComponents/NormalButton';
 
-function AddressRegister() {
+function AccountType() {
     const { Title } = Typography;
     const titleStyle={
         fontFamily: 'GT Walsheim Pro',
@@ -20,11 +20,12 @@ function AddressRegister() {
     }
     return (
         <Fragment>
-            <Title style={titleStyle} level={3}>Welkom! <br/>Ben je ZZP’er of heb je een opdracht?</Title>
+            <Title style={titleStyle} level={3}>Welkom! <br/>Ben je ZZP’er of heb je een <br/>opdracht?</Title>
+            
             <NormalButton {...button1}/>
             <NormalButton {...button2}/>
         </Fragment>
     )
 }
 
-export default AddressRegister
+export default AccountType

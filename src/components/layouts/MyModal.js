@@ -3,12 +3,20 @@ import { Modal,Row, Col,Divider,Image,Typography   } from 'antd';
 import JobLogo from '../ss/JobLogo.svg';
 import styles from '../../globalStyle/customStyle.less';
 import CompanyRegister from '../registrationForms/CompanyRegister';
+import CreateAccount from '../registrationForms/CreateAccount';
+import AccountType from '../registrationForms/AccountType';
+import RegisterDetails from '../registrationForms/RegisterDetails';
+import RegisterComplete from '../registrationForms/RegisterComplete';
+import ResetPassword from '../registrationForms/ResetPassword';
+import EmailSuccess from '../registrationForms/EmailSuccess';
+import NewPassword from '../registrationForms/NewPassword';
+import PasswordSuccess from '../registrationForms/PasswordSuccess';
+import RegistrationDetails from '../registrationForms/RegistrationDetails';
+import EmailActive from '../registrationForms/EmailActive';
 
 
 const MyModal =({match})=> {
-  console.log('Working');
-  console.log(match.url);
-  console.log('End');
+  const route =match.url.replace('/','');
     const [visible, setVisible] = React.useState(false);
     const [confirmLoading, setConfirmLoading] = React.useState(false);
     const { Title } = Typography;
@@ -26,12 +34,12 @@ const MyModal =({match})=> {
       const leftStyle = {
         background:'#002333',
         margin:'10 auto',
-        padding:'15% 20px',
+        padding:'15% 5% 10% 5%',
         height: '520px',
       }
       const rightStyle ={
         background:'#F6F6F6',
-        padding:'15% 20px 2% 20px',
+        padding:'10% 5% 5% 5%',
         height: '520px',
       }
       const titleStyle = {
@@ -58,7 +66,7 @@ const MyModal =({match})=> {
                 visible={visible}
                 onOk={handleOk}
                 confirmLoading={confirmLoading}
-                bodyStyle={{ padding: '0' }}
+                bodyStyle={{ padding: '0',width:'789px',maxWidth:'800px' }}
                 footer={null}
                 >
                 <Row>
@@ -74,7 +82,9 @@ const MyModal =({match})=> {
                      <Title style={subTitleStyle}>Log in om verder te gaan!</Title>
                     </Col>
                   <Col span={14} style={rightStyle}>
-                    <CompanyRegister/>
+                    {route==='login' && <CompanyRegister/>}
+                    {route==='register' && <CreateAccount/>}
+                    {route==='type' && <RegisterDetails/>}
                   </Col>
                 </Row>
             </Modal>

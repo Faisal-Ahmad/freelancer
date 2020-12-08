@@ -4,7 +4,7 @@ import GmailLogo from '../ss/GmailLogo.svg';
 import FacebookLogo from '../ss/FacebookLogo.svg';
 import { Divider,Input,Button,Typography,Anchor,Row, Col   } from 'antd';
 
-function createAccount() {
+function CreateAccount() {
     const { Text, Link } = Typography;
     const iconButton={
         name:"Aanmelden met Google",
@@ -58,4 +58,4 @@ function createAccount() {
     )
 }
 
-export default createAccount
+export default CreateAccount

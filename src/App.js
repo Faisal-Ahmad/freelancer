@@ -19,9 +19,10 @@ function App() {
           </Header>
           <Content>
             <Switch>
-            <Route path="/" exact component={Home}/>
+            <Route path="/" exact component={Home}/> 
             <Route path="/login" component={MyModal}/>
-            <Route path="/register" component={NewRegister}/>
+            <Route path="/register" component={MyModal}/>
+            <Route path="/type" component={MyModal}/>
             </Switch>
           </Content>
       </Layout>
