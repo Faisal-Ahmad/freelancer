@@ -4,17 +4,19 @@ import GmailLogo from '../ss/GmailLogo.svg';
 import FacebookLogo from '../ss/FacebookLogo.svg';
 import { Divider,Input,Button,Typography,Anchor   } from 'antd';
 import {Link} from 'react-router-dom';
+import { UserOutlined,EyeOutlined } from '@ant-design/icons';
 
 function CompanyRegister() {
     const { Text } = Typography;
     
 
     const linkStyle = {
-        'text-decoration-line': 'underline',
-        'background' : 'transparent',
-        'text-align' : 'center',
-        "color": "#222",
-        "display": "block"
+        textDecorationLine: 'underline',
+        background : 'transparent',
+        textAlign : 'center',
+        color: '#222',
+        display: 'block',
+        fontWeight:'bold',
     }
     const iconButton={
         name:"Aanmelden met Google",
@@ -39,11 +41,11 @@ function CompanyRegister() {
             <ButtonWithIcon {...iconButton}/>
             <ButtonWithIcon {...iconButton1}/>
             <Divider orientation="center">Of</Divider>
-            <Input size="large" placeholder="Emailadres" />
-            <Input size="large" placeholder="Wachtwoord" />
+            <Input size="large" placeholder="Gebruikersnaam" addonAfter={<UserOutlined />} />
+            <Input size="large" placeholder="Wachtwoord" addonAfter={<EyeOutlined />} />
             <Button type="primary" style={buttonStyle}>Inloggen</Button>
             <Anchor style={linkStyle}>
-                <Anchor.Link href="#" title="Wachtwoord vergeten?"/>
+                <Anchor.Link href="/forgetpassword" title="Wachtwoord vergeten?"/>
             </Anchor>
             <Text>
             Heeft u nog geen account? 

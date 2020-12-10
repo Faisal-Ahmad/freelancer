@@ -20,15 +20,10 @@ function RegistrationDetails() {
         name:"Sector",
         values : ['abc','def']
     }
-    const selections2={
-        name:"Functie",
-        values : ['abc','def']
-    }
     return (
         <Fragment>
-            <Title style={titleStyle} level={3}>Hallo ZZP’er<br/>Waar ben je naar opzoek?</Title>
+            <Title style={titleStyle} level={3}>Zoek uw bedrijf</Title>
             <SelectArea {...selections1}/>
-            <SelectArea {...selections2}/>
             <NormalButton {...button}/>
         </Fragment> 
     )

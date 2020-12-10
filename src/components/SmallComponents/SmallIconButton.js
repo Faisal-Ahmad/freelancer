@@ -6,6 +6,7 @@ function SmallIconButton(props) {
     const buttonStyle = {
         padding:'0px 10px',
         borderRadius:'15px',
+        color:'#35DF90',
         border: '1px solid #35DF90',
     }
     return (

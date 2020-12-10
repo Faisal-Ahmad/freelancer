@@ -1,7 +1,7 @@
 import React,{Fragment} from 'react';
 import { Typography,Button,Row,Col } from 'antd';
 
-function EmailSuccess() {
+function  EmailSuccess() {
     const { Title } = Typography;
     const titleStyle={
         fontFamily: 'GT Walsheim Pro',
@@ -34,7 +34,7 @@ function EmailSuccess() {
             <Title style={textStyle}>U ontvangt een een email met daarin een link, klik hierop om uw wachtwoord te resetten.</Title>
             <Row justify="center">
                 <Col span={16}>
-                    <Button type="primary" style={buttonStyle}>Inloggen</Button>
+                    <Button type="primary" style={buttonStyle} href='/newpassword'>Inloggen</Button>
                 </Col>
             </Row>
         </Fragment>

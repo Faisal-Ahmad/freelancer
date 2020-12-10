@@ -23,7 +23,7 @@ function PasswordSuccess() {
             <Title style={titleStyle} level={3}>Uw wachtwoord <br/>is gereset, meld u opnieuw aan.</Title>
             <Row justify="center">
                 <Col span={16}>
-                    <Button type="primary" style={buttonStyle}>Inloggen</Button>
+                    <Button type="primary" style={buttonStyle} href='/login'>Inloggen</Button>
                 </Col>
             </Row>
         </Fragment>

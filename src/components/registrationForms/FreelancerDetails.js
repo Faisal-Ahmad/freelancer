@@ -5,7 +5,7 @@ import SelectArea from '../SmallComponents/SelectArea';
 import OkSign from '../ss/OkSign.svg';
 import SmallIconButton from '../SmallComponents/SmallIconButton'
 
-function RegisterDetails() {
+function FreelancerDetails() {
     const { Title } = Typography;
     const titleStyle={
         fontFamily: 'GT Walsheim Pro',
@@ -38,6 +38,10 @@ function RegisterDetails() {
         name:"PHP",
         icon:OkSign,
     }
+    const iconButton2={
+        name:"Adobe",
+        icon:OkSign,
+    }
     return (
         <Fragment>
             <Title style={titleStyle} level={3}>Hallo Name...<br/>Vertel ons wat over jezelf!</Title>
@@ -45,15 +49,16 @@ function RegisterDetails() {
             <SelectArea {...select2}/>
             <SelectArea {...select3}/>
             <SmallIconButton {...iconButton1}/>
+            <SmallIconButton {...iconButton2}/>
             <SelectArea {...select4}/>
             <Input placeholder="Ervaringsjaren"/>
             <Title level={5}>Tarief</Title>
-            <Row gutter={16,{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col className="gutter-row" span={12}>
-                    <Input placeholder="Ervaringsjaren"/>
+                    <Input placeholder="Min"/>
                 </Col>
                 <Col className="gutter-row" span={12}>
-                    <Input placeholder="Ervaringsjaren"/>
+                    <Input placeholder="Max"/>
                 </Col>
             </Row>
             <NormalButton {...button}/>
@@ -61,4 +66,4 @@ function RegisterDetails() {
     )
 }
 
-export default RegisterDetails
+export default FreelancerDetails

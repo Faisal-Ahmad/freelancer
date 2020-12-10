@@ -5,7 +5,7 @@ import styles from '../../globalStyle/customStyle.less';
 import CompanyRegister from '../registrationForms/CompanyRegister';
 import CreateAccount from '../registrationForms/CreateAccount';
 import AccountType from '../registrationForms/AccountType';
-import RegisterDetails from '../registrationForms/RegisterDetails';
+import FreelancerDetails from '../registrationForms/FreelancerDetails';
 import RegisterComplete from '../registrationForms/RegisterComplete';
 import ResetPassword from '../registrationForms/ResetPassword';
 import EmailSuccess from '../registrationForms/EmailSuccess';
@@ -84,7 +84,11 @@ const MyModal =({match})=> {
                   <Col span={14} style={rightStyle}>
                     {route==='login' && <CompanyRegister/>}
                     {route==='register' && <CreateAccount/>}
-                    {route==='type' && <RegisterDetails/>}
+                    {route==='type' && <FreelancerDetails/>}
+                    {route==='forgetpassword' && <ResetPassword/>}
+                    {route==='passwordsent' && <EmailSuccess/>}
+                    {route==='newpassword' && <NewPassword/>}
+                    {route==='resetcomplete' && <PasswordSuccess/>}
                   </Col>
                 </Row>
             </Modal>

@@ -23,6 +23,10 @@ function App() {
             <Route path="/login" component={MyModal}/>
             <Route path="/register" component={MyModal}/>
             <Route path="/type" component={MyModal}/>
+            <Route path="/forgetpassword" component={MyModal}/>
+            <Route path="/passwordsent" component={MyModal}/>
+            <Route path="/newpassword" component={MyModal}/> 
+            <Route path="/resetcomplete" component={MyModal}/> 
             </Switch>
           </Content>
       </Layout>

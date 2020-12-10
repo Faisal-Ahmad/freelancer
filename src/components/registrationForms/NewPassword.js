@@ -41,12 +41,12 @@ function NewPassword() {
             <Input size="large" placeholder="Wachtwoord" />
             <Input size="large" placeholder="Herhaal wachtwoord" />
             <Title style={textStyle} level={5}>Uw wachtwoord moet tenminste 8 tekens bevatten waarvan een hoofdletter, kleine letter, cijfer en speciaal teken</Title>
-            <Button type="primary" style={buttonStyle}>Inloggen</Button>
+            <Button type="primary" style={buttonStyle} href='/resetcomplete'>Inloggen</Button>
             <Row justify='center'>
                 <Col>
                     <Text>
                     Niet veranderen?  
-                    <Link to="/register" target="_self" style={linkStyle}>Inloggen</Link>
+                    <Link to="/login" target="_self" style={linkStyle}>Inloggen</Link>
                     </Text>
                 </Col>
             </Row>

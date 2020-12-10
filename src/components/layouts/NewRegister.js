@@ -2,15 +2,6 @@ import React, {useEffect} from 'react';
 import { Modal,Row, Col,Divider,Image,Typography   } from 'antd';
 import JobLogo from '../ss/JobLogo.svg';
 import styles from '../../globalStyle/customStyle.less';
-import CreateAccount from '../registrationForms/CreateAccount';
-import AccountType from '../registrationForms/AccountType';
-import RegisterDetails from '../registrationForms/RegisterDetails';
-import RegisterComplete from '../registrationForms/RegisterComplete';
-import ResetPassword from '../registrationForms/ResetPassword';
-import EmailSuccess from '../registrationForms/EmailSuccess';
-import NewPassword from '../registrationForms/NewPassword';
-import PasswordSuccess from '../registrationForms/PasswordSuccess';
-import RegistrationDetails from '../registrationForms/RegistrationDetails';
 import EmailActive from '../registrationForms/EmailActive';
 
 
