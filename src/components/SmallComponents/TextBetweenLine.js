@@ -1,26 +1,11 @@
 import React,{Fragment} from 'react';
+import Styles from '../../globalStyle/customStyle.less';
 
 function TextBetweenLine({text}) {
-    const linewithtextStyle ={
-    'display': 'flex',
-    'flex-direction': 'row',
-    'color':'#000000',
-//     &:before, &:after{
-//     content: "";
-//     flex: 1 1;
-//     border-bottom: 1px solid #000;
-//     margin: auto;
-//   }
-//   &:before {
-//     margin-right: 10px
-//   }
-//   &:after {
-//     margin-left: 10px
-//   }
-}
+    console.log(Styles);
     return (
         <Fragment>
-            <Heading style={linewithtextStyle}>{text}</Heading>
+            <h3 className={Styles.linetext}>{text}</h3>
         </Fragment>
     )
 }

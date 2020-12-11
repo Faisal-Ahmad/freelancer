@@ -34,7 +34,7 @@ function RegisterComplete() {
             <Title style={textStyle}>U ontvangt een een email met daarin een activatie link, klik hierop om uw account te activeren</Title>
             <Row justify="center">
                 <Col span={16}>
-                    <Button type="primary" style={buttonStyle}>Inloggen</Button>
+                    <Button type="primary" style={buttonStyle} href="/emailok">Inloggen</Button>
                 </Col>
             </Row>
         </Fragment>

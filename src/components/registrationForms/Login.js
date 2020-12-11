@@ -2,10 +2,23 @@ import React,{Fragment} from 'react';
 import ButtonWithIcon from '../SmallComponents/ButtonWithIcon';
 import GmailLogo from '../ss/GmailLogo.svg';
 import FacebookLogo from '../ss/FacebookLogo.svg';
-import { Divider,Input,Button,Typography,Anchor,Row, Col   } from 'antd';
+import { Divider,Input,Button,Typography,Anchor,Row,Col   } from 'antd';
+import {Link} from 'react-router-dom';
+import { UserOutlined,EyeOutlined } from '@ant-design/icons';
+import TextBetweenLine from '../SmallComponents/TextBetweenLine'
 
-function CreateAccount() {
-    const { Text, Link } = Typography;
+function Login() {
+    const { Text } = Typography;
+    
+
+    const linkStyle = {
+        textDecorationLine: 'underline',
+        background : 'transparent',
+        textAlign : 'center',
+        color: '#222',
+        display: 'block',
+        fontWeight:'bold',
+    }
     const iconButton={
         name:"Aanmelden met Google",
         icon:GmailLogo,
@@ -24,16 +37,13 @@ function CreateAccount() {
         width:'100%',
         background:'#35DF90',
     }
-    const passwordTextstyle={
+    const warningstyle={
         fontFamily:'Basier Square',
         fontSize : '12px',
     }
-    const twoInputStyle ={
-        display:'inline',
-    }
     return (
         <Fragment>
-             <Row gutter={[16,{ xs: 4, sm: 8, md: 16, lg: 16 }]}>
+            <Row gutter={[16,{ xs: 4, sm: 8, md: 16, lg: 16 }]}>
                 <Col className="gutter-row" span={24}>
                     <ButtonWithIcon {...iconButton}/>
                 </Col>
@@ -44,36 +54,27 @@ function CreateAccount() {
                     <Divider orientation="center">Of</Divider>
                 </Col>
                 <Col className="gutter-row" span={24}>
-                    <Row gutter={[16, 0]} align="top">
-                        <Col span={12}>
-                            <Input size="large" placeholder="Voornaam" />
-                        </Col>
-                        <Col span={12}>
-                            <Input size="large" placeholder="Achternaam"/>
-                        </Col>
-                    </Row>
+                    <Input size="large" placeholder="Gebruikersnaam" addonAfter={<UserOutlined />} />
                 </Col>
                 <Col className="gutter-row" span={24}>
-                    <Input size="large" placeholder="Emailadres" />
+                    <Input size="large" placeholder="Wachtwoord" addonAfter={<EyeOutlined />} />
                 </Col>
                 <Col className="gutter-row" span={24}>
-                    <Input size="large" placeholder="Kies een wachtwoord" />
+                    <Text style={warningstyle}>Uw wachtwoord moet tenminste 8 tekens bevatten waarvan een hoofdletter, kleine letter, cijfer en speciaal teken</Text>
                 </Col>
                 <Col className="gutter-row" span={24}>
-                    <Text style={passwordTextstyle}>Uw wachtwoord moet tenminste 8 tekens bevatten waarvan een hoofdletter, kleine letter, cijfer en speciaal teken</Text>
+                    <Button type="primary" style={buttonStyle} href="/success">Inloggen</Button>
                 </Col>
-                <Col className="gutter-row" span={24}>
-                    <Button type="primary" style={buttonStyle} href="/type">Registreren</Button>
-                </Col>
-             </Row>
+            </Row>
+            <Anchor style={linkStyle}>
+                <Anchor.Link href="/forgetpassword" title="Wachtwoord vergeten?"/>
+            </Anchor>
             <Text>
-                Heeft u al een account? 
-                <Link href="/login">
-                Inloggen
-                </Link> 
+            Heeft u nog geen account? 
+            <Link to="/register" target="_self">Meld u nu aan</Link>
             </Text>
         </Fragment>
     )
 }
 
-export default CreateAccount
+export default Login

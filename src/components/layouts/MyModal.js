@@ -2,13 +2,13 @@ import React, {useEffect} from 'react';
 import { Modal,Row, Col,Divider,Image,Typography   } from 'antd';
 import JobLogo from '../ss/JobLogo.svg';
 import styles from '../../globalStyle/customStyle.less';
-import CompanyRegister from '../registrationForms/CompanyRegister';
+import Login from '../registrationForms/Login';
 import CreateAccount from '../registrationForms/CreateAccount';
 import AccountType from '../registrationForms/AccountType';
 import FreelancerDetails from '../registrationForms/FreelancerDetails';
 import RegisterComplete from '../registrationForms/RegisterComplete';
 import ResetPassword from '../registrationForms/ResetPassword';
-import EmailSuccess from '../registrationForms/EmailSuccess';
+import PasswordSent from '../registrationForms/PasswordSent';
 import NewPassword from '../registrationForms/NewPassword';
 import PasswordSuccess from '../registrationForms/PasswordSuccess';
 import RegistrationDetails from '../registrationForms/RegistrationDetails';
@@ -35,12 +35,12 @@ const MyModal =({match})=> {
         background:'#002333',
         margin:'10 auto',
         padding:'15% 5% 10% 5%',
-        height: '520px',
+        height: '568px',
       }
       const rightStyle ={
         background:'#F6F6F6',
         padding:'10% 5% 5% 5%',
-        height: '520px',
+        height: '568px',
       }
       const titleStyle = {
         fontStyle: 'normal',
@@ -58,6 +58,7 @@ const MyModal =({match})=> {
       }
       const dividerStyle = {
         borderTop: '1px solid #FFFFFF',
+        margin:'0px'
       }
     return (
         <div>
@@ -69,26 +70,31 @@ const MyModal =({match})=> {
                 bodyStyle={{ padding: '0',width:'789px',maxWidth:'800px' }}
                 footer={null}
                 >
-                <Row>
+                <Row >
                   <Col span={10} style={leftStyle}>
-                    <Image
-                      width={57}
-                      height={57}
-                      src={JobLogo}
-                      alt={'Job Logo'}
-                    />
-                     <Title style={titleStyle} className={styles.title}>Welkom bij Job.nl</Title>
-                     <Divider style={dividerStyle}/>
-                     <Title style={subTitleStyle}>Log in om verder te gaan!</Title>
+                      <Row gutter={[16,{ xs: 8, sm: 16, md: 18, lg: 18 }]}>
+                        <Col className="gutter-row" span={24}>
+                          <Image width={57} height={57} src={JobLogo} alt={'Job Logo'}/>
+                        </Col>
+                        <Col className="gutter-row" span={24}>
+                          <Title style={titleStyle} className={styles.title}>Welkom bij Job.nl</Title>
+                        </Col>
+                        <Col className="gutter-row" span={24}>
+                          <Divider style={dividerStyle}/>
+                        </Col>
+                        <Col className="gutter-row" span={24}>
+                          <Title style={subTitleStyle}>Log in om verder te gaan!</Title>
+                        </Col>
+                      </Row>
                     </Col>
-                  <Col span={14} style={rightStyle}>
-                    {route==='login' && <CompanyRegister/>}
+                  <Col span={14} style={rightStyle} >
+                    {route==='login' && <Login/>}
                     {route==='register' && <CreateAccount/>}
-                    {route==='type' && <FreelancerDetails/>}
-                    {route==='forgetpassword' && <ResetPassword/>}
-                    {route==='passwordsent' && <EmailSuccess/>}
-                    {route==='newpassword' && <NewPassword/>}
-                    {route==='resetcomplete' && <PasswordSuccess/>}
+                    {route==='type' && <AccountType/>}
+                    {route==='freelancer' && <FreelancerDetails/>}
+                    {route==='details' && <RegistrationDetails/>}
+                    {route==='complete' && <RegisterComplete/>}
+                    {route==='emailok' && <EmailActive/>}
                   </Col>
                 </Row>
             </Modal>

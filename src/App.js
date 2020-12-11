@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.less';
-import {Layout,Typography,Image} from 'antd';
+import {Layout} from 'antd';
 import MyModal from './components/layouts/MyModal';
-import NewRegister from './components/layouts/NewRegister';
+import ForgetPassword from './components/layouts/ForgetPassword';
+import DashBoard from './components/layouts/DashBoard';
 import { Content, Header } from 'antd/lib/layout/layout';
 
 import Nav from './components/Nav';
 import {BrowserRouter as Router,Switch , Route} from 'react-router-dom';
 
 function App() {
-  const { Text } = Typography;
   return (
     <Router>
     <div className="App">
@@ -20,13 +20,9 @@ function App() {
           <Content>
             <Switch>
             <Route path="/" exact component={Home}/> 
-            <Route path="/login" component={MyModal}/>
-            <Route path="/register" component={MyModal}/>
-            <Route path="/type" component={MyModal}/>
-            <Route path="/forgetpassword" component={MyModal}/>
-            <Route path="/passwordsent" component={MyModal}/>
-            <Route path="/newpassword" component={MyModal}/> 
-            <Route path="/resetcomplete" component={MyModal}/> 
+            <Route path={["/login","/register","/details","/type","/freelancer","/complete","/emailok"]} component={MyModal}/>
+            <Route path={["/forgetpassword","/passwordsent","/newpassword","/resetcomplete"]} component={ForgetPassword}/>
+            <Route path={"/success"} component={DashBoard}/>
             </Switch>
           </Content>
       </Layout>

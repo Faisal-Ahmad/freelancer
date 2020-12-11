@@ -1,5 +1,6 @@
 import React,{Fragment} from 'react';
 import { Button } from 'antd';
+import PropTypes from 'prop-types';
 
 function SmallIconButton(props) {
     const {name,icon} = props;
@@ -17,6 +18,10 @@ function SmallIconButton(props) {
             </Button>
         </Fragment>
     )
+}
+SmallIconButton.propTypes ={
+    name : PropTypes.string.isRequired,
+    icon : PropTypes.object,
 }
 
 export default SmallIconButton

@@ -4,7 +4,7 @@ import {Typography,Image} from 'antd';
 import JobLogo from './ss/JobLogo.svg';
 
 function Nav() {
-    const { Text,Title  } = Typography;
+    const { Text  } = Typography;
     return (
         <Fragment>
             <Link to="/">

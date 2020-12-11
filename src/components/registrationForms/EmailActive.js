@@ -8,7 +8,7 @@ function EmailActive() {
         fontStyle: 'normal',
         fontWeight: 'bold',
         fontSize: '20px',
-        lineHeight: '23px',
+        lineHeight: '33px',
         textAlign:'center',
     }
     const textStyle={
@@ -30,11 +30,12 @@ function EmailActive() {
     }
     return (
         <Fragment>
-            <Title style={titleStyle} level={3}>Gefeliciteerd! <br/>Uw email is bevestigd.</Title>
-            <Title style={textStyle}>U kunt nu inloggen </Title>
-            <Row justify="center">
+            <Row  gutter={[16, 0]} justify="center" align="middle">
+                <Col span={24}>
+                    <Title style={titleStyle} level={3}>Gefeliciteerd! <br/>Uw email is bevestigd.</Title>
+                </Col>
                 <Col span={11}>
-                    <Button type="primary" style={buttonStyle}>Inloggen</Button>
+                    <Button type="primary" style={buttonStyle} href="/login">Inloggen</Button>
                 </Col>
             </Row>
         </Fragment>

@@ -1,7 +1,7 @@
 import React,{Fragment} from 'react';
 import { Typography,Button,Row,Col } from 'antd';
 
-function  EmailSuccess() {
+function  PasswordSent() {
     const { Title } = Typography;
     const titleStyle={
         fontFamily: 'GT Walsheim Pro',
@@ -41,4 +41,4 @@ function  EmailSuccess() {
     )
 }
 
-export default EmailSuccess
+export default PasswordSent

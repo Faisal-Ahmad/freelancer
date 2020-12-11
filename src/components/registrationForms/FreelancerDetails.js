@@ -16,7 +16,8 @@ function FreelancerDetails() {
         textAlign:'center',
     }
     const button={
-        name:"Verder"
+        name:"Verder",
+        myurl:"/complete"
     }
     const select1 ={
         name :"Select",
@@ -53,7 +54,7 @@ function FreelancerDetails() {
             <SelectArea {...select4}/>
             <Input placeholder="Ervaringsjaren"/>
             <Title level={5}>Tarief</Title>
-            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+            <Row gutter={{ xs: 8, sm: 1, md: 8, lg: 12 }}>
                 <Col className="gutter-row" span={12}>
                     <Input placeholder="Min"/>
                 </Col>

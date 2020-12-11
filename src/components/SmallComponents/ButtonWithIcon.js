@@ -1,5 +1,6 @@
 import React,{Fragment} from 'react';
 import { Button,Row,Col } from 'antd';
+import PropTypes from 'prop-types';
 
 function ButtonWithIcon(props) {
     const {name,icon,altText,hight,width} = props;
@@ -29,6 +30,9 @@ function ButtonWithIcon(props) {
             </Button>
         </Fragment>
     )
+}
+ButtonWithIcon.propTypes ={
+    name : PropTypes.string.isRequired,
 }
 
 export default ButtonWithIcon

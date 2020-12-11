@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react';
-import { Typography } from 'antd';
+import { Typography,Row,Col } from 'antd';
 import NormalButton from '../SmallComponents/NormalButton';
 
 function AccountType() {
@@ -11,19 +11,27 @@ function AccountType() {
         fontSize: '20px',
         lineHeight: '27px',
         textAlign:'center',
+        marginBottom:'35px',
     }
     const button1={
-        name:"ZZP"
+        name:"ZZP",
+        myurl:"/details",
     }
     const button2={
-        name:"Opdrachtgever"
+        name:"Opdrachtgever",
+        myurl:"/freelancer",
     }
     return (
         <Fragment>
             <Title style={titleStyle} level={3}>Welkom! <br/>Ben je ZZP’er of heb je een <br/>opdracht?</Title>
-            
-            <NormalButton {...button1}/>
-            <NormalButton {...button2}/>
+            <Row gutter={[16,{ xs: 8, sm: 16, md: 14, lg: 16 }]}>
+                <Col className="gutter-row" span={24}>
+                    <NormalButton {...button1}/>
+                </Col>
+                <Col className="gutter-row" span={24}>
+                    <NormalButton {...button2}/>
+                </Col>
+            </Row>
         </Fragment>
     )
 }
